@@ -8,12 +8,17 @@ cat<<EOL>hosts
 127.0.0.1 localhost
 EOL
 
+cat<<EOL>locale.conf
+LANG=en_US.UTF-8
+EOL
+
 mv -vf resolv.conf /etc/resolv.conf
 mv -vf hosts /etc/hosts
+mv -vf locale.conf /etc/locale.conf
 
 echo "next"
-sed -i '/CheckSpace/d' /etc/pacman.conf
 
+sed -i '/CheckSpace/d' /etc/pacman.conf
 
 rm -r /etc/pacman.d/gnupg
 pacman-key --init
