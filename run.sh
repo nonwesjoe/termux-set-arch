@@ -3,13 +3,12 @@
 pkg update -y  
 pkg install wget root-repo tar expect -y  
 pkg update && pkg install tsu -y   
-
 echo done with the first step  
 
 # second strp
 echo second step to get arch
 cd /data/local/tmp  
-sudo wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz  
+sudo wget https://github.com/nonwesjoe/termux-set-arch/releases/download/archarm/ArchLinuxARM-aarch64-latest.tar.gz
 sudo mkdir arch
 cd arch
 sudo tar xvf /data/local/tmp/ArchLinuxARM-aarch64-latest.tar.gz --numeric-owner 
