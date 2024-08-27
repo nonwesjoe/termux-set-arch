@@ -43,5 +43,5 @@ cat<<EOL>arch
 su -c "sh $HOME/sh/start.sh"
 EOL
 
-echo -e 'export PATH=$PATH:$HOME/.shortcuts' >> /data/data/com.termux/files/usr/etc/termux-login.sh
+echo 'export PATH=$PATH:$HOME/.shortcuts' >> /data/data/com.termux/files/usr/etc/termux-login.sh
 echo run "arch" to login
